@@ -11,8 +11,7 @@ const usersSchema = mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: "moviesModel",
       },
-    ],
-    reviews: [{ type: mongoose.Schema.Types.ObjectId, ref: "reviewsModel" }],
+    ]
   },
   { collection: "users" }
 );
