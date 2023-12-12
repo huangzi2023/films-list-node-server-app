@@ -6,12 +6,7 @@ const usersSchema = mongoose.Schema(
     password: { type: String, required: true },
     email: String,
     role: { type: String, enum: ["ADMIN", "FAN", "PRODUCER"] },
-    favoriteMovies: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "moviesModel",
-      },
-    ]
+    favoriteMovies: [String],
   },
   { collection: "users" }
 );

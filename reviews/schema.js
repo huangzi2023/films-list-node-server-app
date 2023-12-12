@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const reviewsSchema = mongoose.Schema(
   {
     author: { type: mongoose.Types.ObjectId, ref: "UsersModel" },
-    imdbID: String,
+    movieId: String,
     review: String,
   },
   { collection: "reviews" }
