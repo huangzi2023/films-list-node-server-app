@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import FollowsRoutes from "./follows/routes.js";
 import ReviewsRoutes from "./reviews/routes.js";
 import SessionController from "./session-controller.js";
+import MoviesRoutes from "./movies/routes.js";
 
 const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
 mongoose.connect(CONNECTION_STRING);
@@ -39,5 +40,6 @@ UsersRoutes(app);
 FollowsRoutes(app);
 ReviewsRoutes(app);
 SessionController(app);
+MoviesRoutes(app);
 
 app.listen(process.env.PORT || 4000);
