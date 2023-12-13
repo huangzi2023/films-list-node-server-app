@@ -4,5 +4,5 @@ export const createReview = (review) => reviewsModel.create(review);
 
 export const findReviewsByAuthor = (author) => reviewsModel.find({ author });
 
-export const findReviewsByMovie = (imdbID) =>
-  reviewsModel.find({ imdbID }).populate("author").exec();
+export const findReviewsByMovie = (movieId) =>
+  reviewsModel.find({ movieId }).populate("author").exec();
