@@ -12,6 +12,9 @@ const allowedMovieFields = [
   "release_date",
   "vote_average",
   "vote_count",
+  "runtime",
+  "tagline",
+  "status"
 ];
 
 export const getMovieDetailsById = async (movieId) => {

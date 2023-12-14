@@ -3,8 +3,10 @@ import * as dao from "./dao.js";
 const ReviewsRoutes = (app) => {
   const createReview = async (req, res) => {
     const review = req.body;
-    const currentUser = req.session["currentUser"];
-    review.author = currentUser._id;
+    if (!review.author || !review.movieId) {
+      res.sendStatus(400);
+      return;
+    }
     const actualReview = await dao.createReview(review);
     res.json(actualReview);
   };
